@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/01-02-线程的创建和运行/01-02-线程的创建和运行.iml" filepath="$PROJECT_DIR$/01-02-线程的创建和运行/01-02-线程的创建和运行.iml" />
+      <module fileurl="file://$PROJECT_DIR$/01-03-线程信息的获取和设置/01-03-线程信息的获取和设置.iml" filepath="$PROJECT_DIR$/01-03-线程信息的获取和设置/01-03-线程信息的获取和设置.iml" />
+      <module fileurl="file://$PROJECT_DIR$/01-04-线程的中断/01-04-线程的中断.iml" filepath="$PROJECT_DIR$/01-04-线程的中断/01-04-线程的中断.iml" />
+      <module fileurl="file://$PROJECT_DIR$/01-05-线程中断的控制/01-05-线程中断的控制.iml" filepath="$PROJECT_DIR$/01-05-线程中断的控制/01-05-线程中断的控制.iml" />
+      <module fileurl="file://$PROJECT_DIR$/01-06-线程的休眠和恢复/01-06-线程的休眠和恢复.iml" filepath="$PROJECT_DIR$/01-06-线程的休眠和恢复/01-06-线程的休眠和恢复.iml" />
+      <module fileurl="file://$PROJECT_DIR$/01-07-等待线程的终止/01-07-等待线程的终止.iml" filepath="$PROJECT_DIR$/01-07-等待线程的终止/01-07-等待线程的终止.iml" />
+      <module fileurl="file://$PROJECT_DIR$/01-08-守护线程的创建和运行/01-08-守护线程的创建和运行.iml" filepath="$PROJECT_DIR$/01-08-守护线程的创建和运行/01-08-守护线程的创建和运行.iml" />
+      <module fileurl="file://$PROJECT_DIR$/01-09-线程中不可控异常的处理/01-09-线程中不可控异常的处理.iml" filepath="$PROJECT_DIR$/01-09-线程中不可控异常的处理/01-09-线程中不可控异常的处理.iml" />
+      <module fileurl="file://$PROJECT_DIR$/01-10-线程局部变量的使用/01-10-线程局部变量的使用.iml" filepath="$PROJECT_DIR$/01-10-线程局部变量的使用/01-10-线程局部变量的使用.iml" />
+      <module fileurl="file://$PROJECT_DIR$/01-11-线程分组/01-11-线程分组.iml" filepath="$PROJECT_DIR$/01-11-线程分组/01-11-线程分组.iml" />
+      <module fileurl="file://$PROJECT_DIR$/01-12-线程组中不可控制异常的处理/01-12-线程组中不可控制异常的处理.iml" filepath="$PROJECT_DIR$/01-12-线程组中不可控制异常的处理/01-12-线程组中不可控制异常的处理.iml" />
+      <module fileurl="file://$PROJECT_DIR$/01-13-使用工厂类创建线程/01-13-使用工厂类创建线程.iml" filepath="$PROJECT_DIR$/01-13-使用工厂类创建线程/01-13-使用工厂类创建线程.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02-02-使用synchronized实现同步方法-问题/02-02-使用synchronized实现同步方法-问题.iml" filepath="$PROJECT_DIR$/02-02-使用synchronized实现同步方法-问题/02-02-使用synchronized实现同步方法-问题.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02-02-使用synchronized实现同步方法-问题解决/02-02-使用synchronized实现同步方法-问题解决.iml" filepath="$PROJECT_DIR$/02-02-使用synchronized实现同步方法-问题解决/02-02-使用synchronized实现同步方法-问题解决.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02-03-使用非依赖属性实现同步/02-03-使用非依赖属性实现同步.iml" filepath="$PROJECT_DIR$/02-03-使用非依赖属性实现同步/02-03-使用非依赖属性实现同步.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02-04-在同步代码中使用条件/02-04-在同步代码中使用条件.iml" filepath="$PROJECT_DIR$/02-04-在同步代码中使用条件/02-04-在同步代码中使用条件.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02-05-用锁实现同步/02-05-用锁实现同步.iml" filepath="$PROJECT_DIR$/02-05-用锁实现同步/02-05-用锁实现同步.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02-06-使用读写锁实现同步数据访问/02-06-使用读写锁实现同步数据访问.iml" filepath="$PROJECT_DIR$/02-06-使用读写锁实现同步数据访问/02-06-使用读写锁实现同步数据访问.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02-07-修改锁的公平性/02-07-修改锁的公平性.iml" filepath="$PROJECT_DIR$/02-07-修改锁的公平性/02-07-修改锁的公平性.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02-08-在锁中使用多条件/02-08-在锁中使用多条件.iml" filepath="$PROJECT_DIR$/02-08-在锁中使用多条件/02-08-在锁中使用多条件.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03-02-资源并发控制访问/03-02-资源并发控制访问.iml" filepath="$PROJECT_DIR$/03-02-资源并发控制访问/03-02-资源并发控制访问.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03-03-资源的多副本的并发访问控制/03-03-资源的多副本的并发访问控制.iml" filepath="$PROJECT_DIR$/03-03-资源的多副本的并发访问控制/03-03-资源的多副本的并发访问控制.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03-04-等待多个并发事件的完成/03-04-等待多个并发事件的完成.iml" filepath="$PROJECT_DIR$/03-04-等待多个并发事件的完成/03-04-等待多个并发事件的完成.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03-05-在集合点的同步/03-05-在集合点的同步.iml" filepath="$PROJECT_DIR$/03-05-在集合点的同步/03-05-在集合点的同步.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03-06-并发阶段任务的运行/03-06-并发阶段任务的运行.iml" filepath="$PROJECT_DIR$/03-06-并发阶段任务的运行/03-06-并发阶段任务的运行.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03-07-并发阶段任务中的阶段切换/03-07-并发阶段任务中的阶段切换.iml" filepath="$PROJECT_DIR$/03-07-并发阶段任务中的阶段切换/03-07-并发阶段任务中的阶段切换.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06-02-使用非阻塞式线程安全列表/06-02-使用非阻塞式线程安全列表.iml" filepath="$PROJECT_DIR$/06-02-使用非阻塞式线程安全列表/06-02-使用非阻塞式线程安全列表.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06-03-使用阻塞式线程安全列表/06-03-使用阻塞式线程安全列表.iml" filepath="$PROJECT_DIR$/06-03-使用阻塞式线程安全列表/06-03-使用阻塞式线程安全列表.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06-04-使用按优先级排序的阻塞式线程安全列表/06-04-使用按优先级排序的阻塞式线程安全列表.iml" filepath="$PROJECT_DIR$/06-04-使用按优先级排序的阻塞式线程安全列表/06-04-使用按优先级排序的阻塞式线程安全列表.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06-05-使用带有延迟元素的线程安全列表/06-05-使用带有延迟元素的线程安全列表.iml" filepath="$PROJECT_DIR$/06-05-使用带有延迟元素的线程安全列表/06-05-使用带有延迟元素的线程安全列表.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06-06-使用线程安全可遍历映射/06-06-使用线程安全可遍历映射.iml" filepath="$PROJECT_DIR$/06-06-使用线程安全可遍历映射/06-06-使用线程安全可遍历映射.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06-07-生成并发随机数/06-07-生成并发随机数.iml" filepath="$PROJECT_DIR$/06-07-生成并发随机数/06-07-生成并发随机数.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06-08-使用原子变量/06-08-使用原子变量.iml" filepath="$PROJECT_DIR$/06-08-使用原子变量/06-08-使用原子变量.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06-09-使用原子数组/06-09-使用原子数组.iml" filepath="$PROJECT_DIR$/06-09-使用原子数组/06-09-使用原子数组.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07-02-定制ThreadPoolExecutor类/07-02-定制ThreadPoolExecutor类.iml" filepath="$PROJECT_DIR$/07-02-定制ThreadPoolExecutor类/07-02-定制ThreadPoolExecutor类.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07-03-基于优先级的Executor类/07-03-基于优先级的Executor类.iml" filepath="$PROJECT_DIR$/07-03-基于优先级的Executor类/07-03-基于优先级的Executor类.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07-04-实现ThreadFactory接口生成定制线程/07-04-实现ThreadFactory接口生成定制线程.iml" filepath="$PROJECT_DIR$/07-04-实现ThreadFactory接口生成定制线程/07-04-实现ThreadFactory接口生成定制线程.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07-05-在Executro对象中使用ThreadFactory/07-05-在Executro对象中使用ThreadFactory.iml" filepath="$PROJECT_DIR$/07-05-在Executro对象中使用ThreadFactory/07-05-在Executro对象中使用ThreadFactory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07-06-定制运行在线程池中的任务/07-06-定制运行在线程池中的任务.iml" filepath="$PROJECT_DIR$/07-06-定制运行在线程池中的任务/07-06-定制运行在线程池中的任务.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07-07-通过实现ThreadFactory接口为Fork-Join框架生成定制线程/07-07-通过实现ThreadFactory接口为Fork-Join框架生成定制线程.iml" filepath="$PROJECT_DIR$/07-07-通过实现ThreadFactory接口为Fork-Join框架生成定制线程/07-07-通过实现ThreadFactory接口为Fork-Join框架生成定制线程.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07-08-定制运行在Fork-Join框架中的任务/07-08-定制运行在Fork-Join框架中的任务.iml" filepath="$PROJECT_DIR$/07-08-定制运行在Fork-Join框架中的任务/07-08-定制运行在Fork-Join框架中的任务.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07-09-现实定制Lock类/07-09-现实定制Lock类.iml" filepath="$PROJECT_DIR$/07-09-现实定制Lock类/07-09-现实定制Lock类.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07-10-实现基于优先级的传输队列/07-10-实现基于优先级的传输队列.iml" filepath="$PROJECT_DIR$/07-10-实现基于优先级的传输队列/07-10-实现基于优先级的传输队列.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07-11-实现自己的原子对象/07-11-实现自己的原子对象.iml" filepath="$PROJECT_DIR$/07-11-实现自己的原子对象/07-11-实现自己的原子对象.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Template/Template.iml" filepath="$PROJECT_DIR$/Template/Template.iml" />
+    </modules>
+  </component>
+</project>
