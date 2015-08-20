@@ -4,10 +4,6 @@ import java.util.concurrent.Phaser;
 
 /**
  * 线程阶段类，控制线程阶段的改变
- * Author: 王俊超
- * Date: 2014-11-25
- * Time: 21:22
- * Declaration: All Rights Reserved !!!
  */
 public class MyPhaser extends Phaser {
     /**

@@ -6,14 +6,10 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 学生类
- * Author: 王俊超
- * Date: 2014-11-25
- * Time: 21:30
- * Declaration: All Rights Reserved !!!
  */
 public class Student implements Runnable {
     /**
-     * 控制线程招手执行的阶段对象
+     * 控制线程执行的阶段对象
      */
     private Phaser phaser;
 

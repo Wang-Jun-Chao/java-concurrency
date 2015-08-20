@@ -3,12 +3,7 @@ package com.concurrency.core;
 import com.concurrency.task.MyPhaser;
 import com.concurrency.task.Student;
 
-/**
- * Author: 王俊超
- * Date: 2014-11-23
- * Time: 08:38
- * Declaration: All Rights Reserved !!!
- */
+
 public class Main {
     public static void main(String[] args) {
         // 创建一个阶段对象

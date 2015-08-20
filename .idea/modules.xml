@@ -28,6 +28,7 @@
       <module fileurl="file://$PROJECT_DIR$/03-05-在集合点的同步/03-05-在集合点的同步.iml" filepath="$PROJECT_DIR$/03-05-在集合点的同步/03-05-在集合点的同步.iml" />
       <module fileurl="file://$PROJECT_DIR$/03-06-并发阶段任务的运行/03-06-并发阶段任务的运行.iml" filepath="$PROJECT_DIR$/03-06-并发阶段任务的运行/03-06-并发阶段任务的运行.iml" />
       <module fileurl="file://$PROJECT_DIR$/03-07-并发阶段任务中的阶段切换/03-07-并发阶段任务中的阶段切换.iml" filepath="$PROJECT_DIR$/03-07-并发阶段任务中的阶段切换/03-07-并发阶段任务中的阶段切换.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03-08-并发任务间的数据交换/03-08-并发任务间的数据交换.iml" filepath="$PROJECT_DIR$/03-08-并发任务间的数据交换/03-08-并发任务间的数据交换.iml" />
       <module fileurl="file://$PROJECT_DIR$/06-02-使用非阻塞式线程安全列表/06-02-使用非阻塞式线程安全列表.iml" filepath="$PROJECT_DIR$/06-02-使用非阻塞式线程安全列表/06-02-使用非阻塞式线程安全列表.iml" />
       <module fileurl="file://$PROJECT_DIR$/06-03-使用阻塞式线程安全列表/06-03-使用阻塞式线程安全列表.iml" filepath="$PROJECT_DIR$/06-03-使用阻塞式线程安全列表/06-03-使用阻塞式线程安全列表.iml" />
       <module fileurl="file://$PROJECT_DIR$/06-04-使用按优先级排序的阻塞式线程安全列表/06-04-使用按优先级排序的阻塞式线程安全列表.iml" filepath="$PROJECT_DIR$/06-04-使用按优先级排序的阻塞式线程安全列表/06-04-使用按优先级排序的阻塞式线程安全列表.iml" />
