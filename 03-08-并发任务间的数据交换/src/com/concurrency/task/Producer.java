@@ -5,14 +5,10 @@ import java.util.concurrent.Exchanger;
 
 /**
  * 生产者类
- * Author: 王俊超
- * Date: 2014-11-26
- * Time: 09:02
- * Declaration: All Rights Reserved !!!
  */
 public class Producer implements Runnable {
     /**
-     * 生产者生产数后存储的地方，也是与消费者交换数据的地方
+     * 生产者生产数据后存储的地方，也是与消费者交换数据的地方
      */
     private List<String> buffer;
     /**
@@ -32,8 +28,9 @@ public class Producer implements Runnable {
     }
 
     /**
-     * 核心方法，产生100个事件，分10次产生，每次产生10个事件，每个产生10个事件后，调用数据交换对象去同步消费者。
-     * 生产者将存放10个事件的缓存对象发送给消费者，并且从消费者那里接收到一个空的缓存对象
+     * 核心方法，产生100个事件，分10次产生，每次产生10个事件，每个产生10个事件后，
+     * 调用数据交换对象去同步消费者。生产者将存放10个事件的缓存对象发送给消费者，
+     * 并且从消费者那里接收到一个空的缓存对象
      */
     @Override
     public void run() {

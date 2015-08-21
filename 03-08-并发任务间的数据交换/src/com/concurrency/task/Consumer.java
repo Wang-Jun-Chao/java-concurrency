@@ -5,10 +5,6 @@ import java.util.concurrent.Exchanger;
 
 /**
  * 消费者类
- * Author: 王俊超
- * Date: 2014-11-26
- * Time: 09:05
- * Declaration: All Rights Reserved !!!
  */
 public class Consumer implements Runnable {
 
