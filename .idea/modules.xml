@@ -33,6 +33,10 @@
       <module fileurl="file://$PROJECT_DIR$/04-03-创建固定大小的线程执行器/04-03-创建固定大小的线程执行器.iml" filepath="$PROJECT_DIR$/04-03-创建固定大小的线程执行器/04-03-创建固定大小的线程执行器.iml" />
       <module fileurl="file://$PROJECT_DIR$/04-04-在执行器中执行任务并返回结果/04-04-在执行器中执行任务并返回结果.iml" filepath="$PROJECT_DIR$/04-04-在执行器中执行任务并返回结果/04-04-在执行器中执行任务并返回结果.iml" />
       <module fileurl="file://$PROJECT_DIR$/04-05-运行多个任务并处理第一个结果/04-05-运行多个任务并处理第一个结果.iml" filepath="$PROJECT_DIR$/04-05-运行多个任务并处理第一个结果/04-05-运行多个任务并处理第一个结果.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04-06-运行多个任务并且处理所有结果/04-06-运行多个任务并且处理所有结果.iml" filepath="$PROJECT_DIR$/04-06-运行多个任务并且处理所有结果/04-06-运行多个任务并且处理所有结果.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04-07-在执行器中延时执行任务/04-07-在执行器中延时执行任务.iml" filepath="$PROJECT_DIR$/04-07-在执行器中延时执行任务/04-07-在执行器中延时执行任务.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04-08-在执行器中周期性执行任务/04-08-在执行器中周期性执行任务.iml" filepath="$PROJECT_DIR$/04-08-在执行器中周期性执行任务/04-08-在执行器中周期性执行任务.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04-09-在执行器中取消任务/04-09-在执行器中取消任务.iml" filepath="$PROJECT_DIR$/04-09-在执行器中取消任务/04-09-在执行器中取消任务.iml" />
       <module fileurl="file://$PROJECT_DIR$/06-02-使用非阻塞式线程安全列表/06-02-使用非阻塞式线程安全列表.iml" filepath="$PROJECT_DIR$/06-02-使用非阻塞式线程安全列表/06-02-使用非阻塞式线程安全列表.iml" />
       <module fileurl="file://$PROJECT_DIR$/06-03-使用阻塞式线程安全列表/06-03-使用阻塞式线程安全列表.iml" filepath="$PROJECT_DIR$/06-03-使用阻塞式线程安全列表/06-03-使用阻塞式线程安全列表.iml" />
       <module fileurl="file://$PROJECT_DIR$/06-04-使用按优先级排序的阻塞式线程安全列表/06-04-使用按优先级排序的阻塞式线程安全列表.iml" filepath="$PROJECT_DIR$/06-04-使用按优先级排序的阻塞式线程安全列表/06-04-使用按优先级排序的阻塞式线程安全列表.iml" />
