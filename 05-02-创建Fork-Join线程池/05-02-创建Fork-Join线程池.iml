@@ -12,6 +12,7 @@
     <option name="_basePreferences">
       <map>
         <entry key="property.analysisEffortLevel" value="default" />
+        <entry key="property.analyzeAfterAutoMake" value="false" />
         <entry key="property.analyzeAfterCompile" value="false" />
         <entry key="property.annotationGutterIconEnabled" value="true" />
         <entry key="property.annotationSuppressWarningsClass" value="edu.umd.cs.findbugs.annotations.SuppressFBWarnings" />
@@ -51,6 +52,7 @@
         <entry key="ComparatorIdiom" value="true" />
         <entry key="ConfusedInheritance" value="true" />
         <entry key="ConfusionBetweenInheritedAndOuterMethod" value="true" />
+        <entry key="CovariantArrayAssignment" value="false" />
         <entry key="CrossSiteScripting" value="true" />
         <entry key="DefaultEncodingDetector" value="true" />
         <entry key="DoInsideDoPrivileged" value="true" />
@@ -70,6 +72,7 @@
         <entry key="FindBadForLoop" value="true" />
         <entry key="FindBugsSummaryStats" value="true" />
         <entry key="FindCircularDependencies" value="false" />
+        <entry key="FindComparatorProblems" value="true" />
         <entry key="FindDeadLocalStores" value="true" />
         <entry key="FindDoubleCheck" value="true" />
         <entry key="FindEmptySynchronizedBlock" value="true" />
@@ -111,16 +114,17 @@
         <entry key="FindUnsyncGet" value="true" />
         <entry key="FindUseOfNonSerializableValue" value="true" />
         <entry key="FindUselessControlFlow" value="true" />
+        <entry key="FindUselessObjects" value="true" />
         <entry key="FormatStringChecker" value="true" />
         <entry key="FunctionsThatMightBeMistakenForProcedures" value="true" />
         <entry key="HugeSharedStringConstants" value="true" />
         <entry key="IDivResultCastToDouble" value="true" />
         <entry key="IncompatMask" value="true" />
         <entry key="InconsistentAnnotations" value="true" />
-        <entry key="InefficientIndexOf" value="true" />
-        <entry key="InefficientInitializationInsideLoop" value="true" />
+        <entry key="InefficientIndexOf" value="false" />
+        <entry key="InefficientInitializationInsideLoop" value="false" />
         <entry key="InefficientMemberAccess" value="false" />
-        <entry key="InefficientToArray" value="true" />
+        <entry key="InefficientToArray" value="false" />
         <entry key="InfiniteLoop" value="true" />
         <entry key="InfiniteRecursiveLoop" value="true" />
         <entry key="InheritanceUnsafeGetResource" value="true" />
@@ -136,6 +140,7 @@
         <entry key="MethodReturnCheck" value="true" />
         <entry key="Methods" value="true" />
         <entry key="MultithreadedInstanceAccess" value="true" />
+        <entry key="MutableEnum" value="true" />
         <entry key="MutableLock" value="true" />
         <entry key="MutableStaticFields" value="true" />
         <entry key="Naming" value="true" />
@@ -157,6 +162,7 @@
         <entry key="QuestionableBooleanAssignment" value="true" />
         <entry key="ReadOfInstanceFieldInMethodInvokedByConstructorInSuperclass" value="true" />
         <entry key="ReadReturnShouldBeChecked" value="true" />
+        <entry key="RedundantConditions" value="true" />
         <entry key="RedundantInterfaces" value="true" />
         <entry key="ReflectiveClasses" value="true" />
         <entry key="RepeatedConditionals" value="true" />

@@ -37,7 +37,16 @@
       <module fileurl="file://$PROJECT_DIR$/04-07-在执行器中延时执行任务/04-07-在执行器中延时执行任务.iml" filepath="$PROJECT_DIR$/04-07-在执行器中延时执行任务/04-07-在执行器中延时执行任务.iml" />
       <module fileurl="file://$PROJECT_DIR$/04-08-在执行器中周期性执行任务/04-08-在执行器中周期性执行任务.iml" filepath="$PROJECT_DIR$/04-08-在执行器中周期性执行任务/04-08-在执行器中周期性执行任务.iml" />
       <module fileurl="file://$PROJECT_DIR$/04-09-在执行器中取消任务/04-09-在执行器中取消任务.iml" filepath="$PROJECT_DIR$/04-09-在执行器中取消任务/04-09-在执行器中取消任务.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04-10-在执行器中控制任务的完成/04-10-在执行器中控制任务的完成.iml" filepath="$PROJECT_DIR$/04-10-在执行器中控制任务的完成/04-10-在执行器中控制任务的完成.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04-11-在执行器中分离任务的启动与结果的处理/04-11-在执行器中分离任务的启动与结果的处理.iml" filepath="$PROJECT_DIR$/04-11-在执行器中分离任务的启动与结果的处理/04-11-在执行器中分离任务的启动与结果的处理.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04-12-处理在执行器中被拒绝的任务/04-12-处理在执行器中被拒绝的任务.iml" filepath="$PROJECT_DIR$/04-12-处理在执行器中被拒绝的任务/04-12-处理在执行器中被拒绝的任务.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05-02-创建Fork-Join线程池/05-02-创建Fork-Join线程池.iml" filepath="$PROJECT_DIR$/05-02-创建Fork-Join线程池/05-02-创建Fork-Join线程池.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05-03-合并任务的结果/05-03-合并任务的结果.iml" filepath="$PROJECT_DIR$/05-03-合并任务的结果/05-03-合并任务的结果.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05-04-异步运行任务/05-04-异步运行任务.iml" filepath="$PROJECT_DIR$/05-04-异步运行任务/05-04-异步运行任务.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05-05-在任务中抛出异常/05-05-在任务中抛出异常.iml" filepath="$PROJECT_DIR$/05-05-在任务中抛出异常/05-05-在任务中抛出异常.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05-06-取消任务/05-06-取消任务.iml" filepath="$PROJECT_DIR$/05-06-取消任务/05-06-取消任务.iml" />
       <module fileurl="file://$PROJECT_DIR$/06-02-使用非阻塞式线程安全列表/06-02-使用非阻塞式线程安全列表.iml" filepath="$PROJECT_DIR$/06-02-使用非阻塞式线程安全列表/06-02-使用非阻塞式线程安全列表.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06-02-使用非阻塞式线程安全列表/06-02-使用非阻塞式线程安全列表1.iml" filepath="$PROJECT_DIR$/06-02-使用非阻塞式线程安全列表/06-02-使用非阻塞式线程安全列表1.iml" />
       <module fileurl="file://$PROJECT_DIR$/06-03-使用阻塞式线程安全列表/06-03-使用阻塞式线程安全列表.iml" filepath="$PROJECT_DIR$/06-03-使用阻塞式线程安全列表/06-03-使用阻塞式线程安全列表.iml" />
       <module fileurl="file://$PROJECT_DIR$/06-04-使用按优先级排序的阻塞式线程安全列表/06-04-使用按优先级排序的阻塞式线程安全列表.iml" filepath="$PROJECT_DIR$/06-04-使用按优先级排序的阻塞式线程安全列表/06-04-使用按优先级排序的阻塞式线程安全列表.iml" />
       <module fileurl="file://$PROJECT_DIR$/06-05-使用带有延迟元素的线程安全列表/06-05-使用带有延迟元素的线程安全列表.iml" filepath="$PROJECT_DIR$/06-05-使用带有延迟元素的线程安全列表/06-05-使用带有延迟元素的线程安全列表.iml" />
