@@ -3,48 +3,27 @@ package com.concurrency.core;
 import com.concurrency.task.MyTask;
 import com.concurrency.task.MyThreadFactory;
 
-/**
- * Main class of the example. Creates a factory, a MyThread object to execute a Task object
- * and executes the Thread
- */
 public class Main {
 
-    /**
-     * @param args
-     */
     public static void main(String[] args) throws Exception {
-        /*
-		 * Create a Factory
-		 */
+        // 创建一个线程工厂
         MyThreadFactory myFactory = new MyThreadFactory("MyThreadFactory");
-	
-		/*
-		 * Crate a Task
-		 */
+
+        // 创建一个任务
         MyTask task = new MyTask();
-		
-		/*
-		 * Create a Thread using the Factory to execute the Task
-		 */
+
+        // 使用自定义的线程工厂创建一个新的线程
         Thread thread = myFactory.newThread(task);
-		
-		/*
-		 * Start the Thread
-		 */
+
+        // 开始执行线程
         thread.start();
-		
-		/*
-		 * Wait for the finalization of the Thread
-		 */
+
+        // 等待线程执行结束
         thread.join();
-		
-		/*
-		 * Write the thread info to the console
-		 */
+
+        // 输出线程信息
         System.out.printf("Main: Thread information.\n");
         System.out.printf("%s\n", thread);
         System.out.printf("Main: End of the example.\n");
-
     }
-
 }

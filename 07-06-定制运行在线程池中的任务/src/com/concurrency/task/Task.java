@@ -3,14 +3,12 @@ package com.concurrency.task;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Runnable object to check the MyScheduledTask and MyScheduledThreadPoolExecutor classes.
- *
+ * 自定义任务类
  */
 public class Task implements Runnable {
 
 	/**
-	 * Main method of the task. Writes a message, sleeps the current thread for two seconds and
-	 * writes another message
+	 * 主方法，运行两秒钟
 	 */
 	@Override
 	public void run() {
@@ -22,5 +20,4 @@ public class Task implements Runnable {
 		}
 		System.out.printf("Task: End.\n");
 	}
-
 }

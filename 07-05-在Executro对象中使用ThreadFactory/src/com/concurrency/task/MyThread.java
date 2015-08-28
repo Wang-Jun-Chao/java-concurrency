@@ -3,88 +3,77 @@ package com.concurrency.task;
 import java.util.Date;
 
 /**
- * This class implement your own Thread. It stores the creation date, the
- * start date and the finish date of the thread. It provides a mehtod that
- * calculates the execution time of the thread. Overrides the toString() method
- * to return information about the creationDate and the execution time of the thread
+ * 自定义线程类
  */
 public class MyThread extends Thread {
-	
-	/**
-	 * Creation date of the thread
-	 */
+
+
+	// 线程创建的时间
 	private Date creationDate;
-	
-	/**
-	 * Start date of the thread
-	 */
+
+	// 线开始执行的时间
 	private Date startDate;
-	
-	/**
-	 * Finish date of the thread
-	 */
+
+	// 线程完成执行的时间
 	private Date finishDate;
-	
+
 	/**
-	 * Constructor of the class. It establishes the value of the creation date attribute
-	 * @param target Runnable object that this thread is going to execute
-	 * @param name Name of the thread
+	 * 构造函数
+	 *
+	 * @param target 执行的任务
+	 * @param name   线程的名称
 	 */
-	public MyThread(Runnable target, String name ){
-		super(target,name);
+	public MyThread(Runnable target, String name) {
+		super(target, name);
 		setCreationDate();
 	}
 
 	/**
-	 * Main method of the thread. Stores the start and finish date of the thread and calls
-	 * the run() method of its parent class
+	 * 主方法，记录线程运行的开始和结束时间
 	 */
 	@Override
 	public void run() {
 		setStartDate();
 		super.run();
 		setFinishDate();
-		System.out.printf("Thread: %s\n",toString());
 	}
-	
+
 	/**
-	 * Method that establish the creation date of the thread
+	 * 设置线程创建的时间
 	 */
 	public void setCreationDate() {
-		creationDate=new Date();
+		creationDate = new Date();
 	}
-	
+
 	/**
-	 * Method that establish the start date of the thread
+	 * 设置线程开始执行的时间
 	 */
 	public void setStartDate() {
-		startDate=new Date();
+		startDate = new Date();
 	}
-	
+
 	/**
-	 * Method that establish the finish date of the thread
+	 * 设置线程结束执行的时间
 	 */
 	public void setFinishDate() {
-		finishDate=new Date();
+		finishDate = new Date();
 	}
-	
+
 	/**
-	 * Method that calculates the execution time of the thread as the difference
-	 * between the finish date and the start date.
-	 * @return
+	 * 计算线程执行的时间
+	 *
+	 * @return 线程执行的时间
 	 */
 	public long getExecutionTime() {
-		long ret;
-		ret=finishDate.getTime()-startDate.getTime();
-		return ret;
+		return finishDate.getTime() - startDate.getTime();
 	}
-	
+
 	/**
-	 * Method that generates a String with information about the creation date and the
-	 * execution time of the thread
+	 * 输出线程相关信息
 	 */
-	public String toString(){
-		StringBuffer buffer=new StringBuffer();
+	@Override
+	public String toString() {
+		StringBuilder buffer = new StringBuilder();
 		buffer.append(getName());
 		buffer.append(": ");
 		buffer.append(" Creation Date: ");

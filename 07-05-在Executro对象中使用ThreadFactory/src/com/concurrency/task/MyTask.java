@@ -1,24 +1,21 @@
 package com.concurrency.task;
 
-import java.util.concurrent.TimeUnit;
+        import java.util.concurrent.TimeUnit;
 
 /**
- * Task to check the MyThread and MyThreadFactory classes. It sleeps
- * the thread for two seconds
- *
+ * 自定义的任务类
  */
 public class MyTask implements Runnable {
 
-	/**
-	 * Main method of the task. It sleeps the thread for two seconds
-	 */
-	@Override
-	public void run() {
-		try {
-			TimeUnit.SECONDS.sleep(2);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-	}
-
+    /**
+     * 主方法，休眠两秒钟
+     */
+    @Override
+    public void run() {
+        try {
+            TimeUnit.SECONDS.sleep(2);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 }

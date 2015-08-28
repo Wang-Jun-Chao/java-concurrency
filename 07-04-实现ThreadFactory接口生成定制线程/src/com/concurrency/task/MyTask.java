@@ -4,13 +4,12 @@ import java.util.concurrent.TimeUnit;
 
 
 /**
- * Task to be executed in the MyThread threads
- *
+ * 自定义的任务类
  */
 public class MyTask implements Runnable {
 
 	/**
-	 * Main method of the Thread. Sleeps the thread during two seconds
+	 * 主方法，休眠两秒钟
 	 */
 	@Override
 	public void run() {
@@ -20,5 +19,4 @@ public class MyTask implements Runnable {
 			e.printStackTrace();
 		}
 	}
-
 }

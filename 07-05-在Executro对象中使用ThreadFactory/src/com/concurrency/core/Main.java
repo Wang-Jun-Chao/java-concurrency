@@ -7,57 +7,29 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-
-/**
- * Main class of the example. Creates a Factory, an Executor using
- * that factory and submits a task to the executor
- *
- */
 public class Main {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) throws Exception {
 		
-		/*
-		 * Create a new MyThreadFactory object
-		 */
+		// 创建一个自定义的线程工厂类
 		MyThreadFactory threadFactory=new MyThreadFactory("MyThreadFactory");
 		
-		/*
-		 * Create a new ThreadPoolExecutor and configure it for use the 
-		 * MyThreadFactoryObject created before as the factory to create the threads
-		 */
+		// 创建一个线程缓冲池执行器对象，它的参数是线程工厂类
 		ExecutorService executor=Executors.newCachedThreadPool(threadFactory);
 		
-		/*
-		 * Create a new Task object
-		 */
+		// 创建一个自定义任务
 		MyTask task=new MyTask();
 		
-		/*
-		 * Submit the task 
-		 */
+		// 任务提交到执行器
 		executor.submit(task);
 		
-		/*
-		 * Shutdown the executor
-		 */
+		// 关闭执行器对象
 		executor.shutdown();
 		
-		/*
-		 * Wait for the finalization of the executor
-		 */
+		// 等待执行器中的任务运行结束
 		executor.awaitTermination(1, TimeUnit.DAYS);
 		
-		/*
-		 * Write a message indicating the end of the program
-		 */
+		// 输出信息表明程序已经结束
 		System.out.printf("Main: End of the program.\n");
-		
-		
-
 	}
-
 }
