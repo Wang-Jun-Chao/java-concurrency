@@ -6,12 +6,6 @@ import java.util.Date;
 import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.TimeUnit;
 
-/**
- * Author: 王俊超
- * Date: 2014-11-23
- * Time: 08:38
- * Declaration: All Rights Reserved !!!
- */
 public class Main {
     public static void main(String[] args) throws Exception {
         // 创建一个并发链式双向队列

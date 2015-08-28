@@ -10,36 +10,22 @@ import java.util.concurrent.Future;
 import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.TimeUnit;
 
-/**
- * Author: 王俊超
- * Date: 2014-11-23
- * Time: 08:38
- * Declaration: All Rights Reserved !!!
- */
 public class Main {
     public static void main(String[] args) {
-           /*
-         * Creation of the custom executor
-		 */
+        // 创建一个定制的线程执行器
         MyExecutor myExecutor = new MyExecutor(2, 4, 1000, TimeUnit.MILLISECONDS, new LinkedBlockingDeque<Runnable>());
 
-		/*
-		 * Create a list to store the objects to control the execution of the tasks
-		 */
+        // 创建一个队列来存存储任务的执行结果
         List<Future<String>> results = new ArrayList<>();
 
-		/*
-		 * Create and submit to the executor 10 tasks
-		 */
+        // 创建并且提交10个任务
         for (int i = 0; i < 10; i++) {
             SleepTwoSecondsTask task = new SleepTwoSecondsTask();
             Future<String> result = myExecutor.submit(task);
             results.add(result);
         }
 
-		/*
-		 * Get the result of the execution of the first five tasks
-		 */
+        // 获取前5个的执行结果
         for (int i = 0; i < 5; i++) {
             try {
                 String result = results.get(i).get();
@@ -49,14 +35,10 @@ public class Main {
             }
         }
 
-		/*
-		 * Call the shutdown method
-		 */
+        // 关闭线执行器
         myExecutor.shutdown();
 
-		/*
-		 * Get the results of the execution of the last five tasks
-		 */
+        // 获取后5个的执行结果
         for (int i = 5; i < 10; i++) {
             try {
                 String result = results.get(i).get();
@@ -66,18 +48,14 @@ public class Main {
             }
         }
 
-		/*
-		 * Wait for the finalization of the Executor
-		 */
+        // 等待执行器执行完
         try {
             myExecutor.awaitTermination(1, TimeUnit.DAYS);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
-		/*
-		 * Write a message indicating the end of the program
-		 */
+        // 输出信息，表示整个程序运行结束
         System.out.printf("Main: End of the program.\n");
     }
 }

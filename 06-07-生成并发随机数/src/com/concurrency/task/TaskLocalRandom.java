@@ -24,5 +24,4 @@ public class TaskLocalRandom implements Runnable {
             System.out.printf("%s: %d\n", name, ThreadLocalRandom.current().nextInt(10));
         }
     }
-
 }

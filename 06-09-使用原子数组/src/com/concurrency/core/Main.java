@@ -5,12 +5,6 @@ import com.concurrency.task.Incrementer;
 
 import java.util.concurrent.atomic.AtomicIntegerArray;
 
-/**
- * Author: 王俊超
- * Date: 2014-11-23
- * Time: 08:38
- * Declaration: All Rights Reserved !!!
- */
 public class Main {
     public static void main(String[] args) {
         // 线程个数

@@ -46,7 +46,6 @@
       <module fileurl="file://$PROJECT_DIR$/05-05-在任务中抛出异常/05-05-在任务中抛出异常.iml" filepath="$PROJECT_DIR$/05-05-在任务中抛出异常/05-05-在任务中抛出异常.iml" />
       <module fileurl="file://$PROJECT_DIR$/05-06-取消任务/05-06-取消任务.iml" filepath="$PROJECT_DIR$/05-06-取消任务/05-06-取消任务.iml" />
       <module fileurl="file://$PROJECT_DIR$/06-02-使用非阻塞式线程安全列表/06-02-使用非阻塞式线程安全列表.iml" filepath="$PROJECT_DIR$/06-02-使用非阻塞式线程安全列表/06-02-使用非阻塞式线程安全列表.iml" />
-      <module fileurl="file://$PROJECT_DIR$/06-02-使用非阻塞式线程安全列表/06-02-使用非阻塞式线程安全列表1.iml" filepath="$PROJECT_DIR$/06-02-使用非阻塞式线程安全列表/06-02-使用非阻塞式线程安全列表1.iml" />
       <module fileurl="file://$PROJECT_DIR$/06-03-使用阻塞式线程安全列表/06-03-使用阻塞式线程安全列表.iml" filepath="$PROJECT_DIR$/06-03-使用阻塞式线程安全列表/06-03-使用阻塞式线程安全列表.iml" />
       <module fileurl="file://$PROJECT_DIR$/06-04-使用按优先级排序的阻塞式线程安全列表/06-04-使用按优先级排序的阻塞式线程安全列表.iml" filepath="$PROJECT_DIR$/06-04-使用按优先级排序的阻塞式线程安全列表/06-04-使用按优先级排序的阻塞式线程安全列表.iml" />
       <module fileurl="file://$PROJECT_DIR$/06-05-使用带有延迟元素的线程安全列表/06-05-使用带有延迟元素的线程安全列表.iml" filepath="$PROJECT_DIR$/06-05-使用带有延迟元素的线程安全列表/06-05-使用带有延迟元素的线程安全列表.iml" />

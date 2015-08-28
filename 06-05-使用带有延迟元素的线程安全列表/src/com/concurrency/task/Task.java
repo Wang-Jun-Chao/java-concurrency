@@ -31,7 +31,7 @@ public class Task implements Runnable {
 
 
     /**
-     * 核心方法，产生1000事件，每个事件有相同的激活时间，将这些事件存储在延迟队列中
+     * 核心方法，产生100事件，每个事件有相同的激活时间，将这些事件存储在延迟队列中
      */
     @Override
     public void run() {

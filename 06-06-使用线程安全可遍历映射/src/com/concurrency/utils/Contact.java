@@ -1,8 +1,7 @@
 package com.concurrency.utils;
 
 /**
- * 联系人
- * This class implements a Contact to store in the navigable map
+ * 联系人类
  */
 public class Contact {
 

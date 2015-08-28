@@ -4,10 +4,8 @@ import com.concurrency.utils.Contact;
 
 import java.util.concurrent.ConcurrentSkipListMap;
 
-
 /**
  * 任务类，将联系人存储在一个可遍历的图中
- * This class implements a task that store contacts in a navigable map
  */
 public class Task implements Runnable {
 
@@ -42,6 +40,4 @@ public class Task implements Runnable {
             map.put(id + contact.getPhone(), contact);
         }
     }
-
-
 }

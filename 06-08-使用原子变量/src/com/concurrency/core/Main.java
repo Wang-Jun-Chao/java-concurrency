@@ -4,12 +4,6 @@ import com.concurrency.task.Account;
 import com.concurrency.task.Bank;
 import com.concurrency.task.Company;
 
-/**
- * Author: 王俊超
- * Date: 2014-11-23
- * Time: 08:38
- * Declaration: All Rights Reserved !!!
- */
 public class Main {
     public static void main(String[] args) {
         // 创建一个帐户对象

@@ -4,6 +4,9 @@ import java.util.Date;
 import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * 向阻塞队列中添加数据的类
+ */
 public class Client implements Runnable {
 
     private LinkedBlockingDeque<String> requestList;
@@ -12,6 +15,9 @@ public class Client implements Runnable {
         this.requestList = requestList;
     }
 
+    /**
+     * 核心方法，添加15个对象
+     */
     @Override
     public void run() {
         for (int i = 0; i < 3; i++) {

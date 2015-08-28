@@ -31,6 +31,4 @@ public class PollTask implements Runnable {
             list.pollLast();
         }
     }
-
-
 }
