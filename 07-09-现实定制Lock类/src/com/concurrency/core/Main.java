@@ -5,34 +5,21 @@ import com.concurrency.task.Task;
 
 import java.util.concurrent.TimeUnit;
 
-
-/**
- * Main class of the example
- */
 public class Main {
 
-    /**
-     * @param args
-     */
     public static void main(String[] args) {
 
-		/*
-         * Create a new MyLock object
-		 */
+        // 创建一个自定义的锁对象
         MyLock lock = new MyLock();
-		
-		/*
-		 * Create and run ten task objects
-		 */
+
+        // 创建10个运行任务对象
         for (int i = 0; i < 10; i++) {
             Task task = new Task("Task-" + i, lock);
             Thread thread = new Thread(task);
             thread.start();
         }
-		
-		/*
-		 * The main thread also tries to get the lock
-		 */
+
+        // 主线程试图获取锁
         boolean value;
         do {
             try {
@@ -45,16 +32,12 @@ public class Main {
                 value = false;
             }
         } while (!value);
-		
-		/*
-		 * The main thread release the lock
-		 */
+
+        // 主线程释放锁
         System.out.printf("Main: Got the lock\n");
         lock.unlock();
-		
-		/*
-		 * Write a message in the console indicating the end of the program
-		 */
+
+        // 输出信息，表明程序运行结束
         System.out.printf("Main: End of the program\n");
     }
 

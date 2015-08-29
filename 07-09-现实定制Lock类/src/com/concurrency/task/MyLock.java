@@ -6,26 +6,24 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 
 /**
- * This class implements a basic Lock. It uses a myAbstractQueueSyncrhonized object
- * as the element from which implement the methods of the lock.
+ * 自定义锁实现类
  */
 public class MyLock implements Lock {
 
     /**
-     * Synchronizer to implement the operations of the locks
+     * 用来实现锁的同步器
      */
     private AbstractQueuedSynchronizer sync;
 
     /**
-     * Constructor of the class. It initializes its attribute
+     * 构造函数，初始化属性
      */
     public MyLock() {
         sync = new MyAbstractQueuedSynchronizer();
     }
 
     /**
-     * Method that try to acquire the lock. If it can't, the thread
-     * will be blocked until the thread that has it release the lock
+     * 获取锁
      */
     @Override
     public void lock() {
@@ -33,10 +31,7 @@ public class MyLock implements Lock {
     }
 
     /**
-     * Method that try to acquire the lock. If it can't, the thread will
-     * be blocked until the thread that has it release the lock. The difference
-     * with the lock() method is that in this case, the blocked threads can
-     * be interrupted
+     * 获取锁，如果获取不锁线程会阻塞到锁释放，阻塞的线程可以被中断
      */
     @Override
     public void lockInterruptibly() throws InterruptedException {
@@ -44,8 +39,7 @@ public class MyLock implements Lock {
     }
 
     /**
-     * Method that try to acquire the lock. If it can, the method returns the true
-     * value. It it can't, the method return the false value
+     * 获取锁，如果获取到就返回true，如果获取不到就返回false
      */
     @Override
     public boolean tryLock() {
@@ -58,10 +52,12 @@ public class MyLock implements Lock {
     }
 
     /**
-     * Method that try to acquire the lock. If it can, the method returns the true value.
-     * If it can't, wait the time specified as parameter and if the lock hasn't been
-     * released, it returns the false value. It the lock is released in that period of time,
-     * the thread acquires the lock and the method returns the true value
+     * 在指定的时间办获取锁，如果获取到就返回true，否则就返回false
+     *
+     * @param time 时间量
+     * @param unit 时间单位
+     * @return 如果获取到就返回true，否则就返回false
+     * @throws InterruptedException
      */
     @Override
     public boolean tryLock(long time, TimeUnit unit) throws InterruptedException {
@@ -69,7 +65,7 @@ public class MyLock implements Lock {
     }
 
     /**
-     * Method that release the lock
+     * 释放锁
      */
     @Override
     public void unlock() {
@@ -77,7 +73,7 @@ public class MyLock implements Lock {
     }
 
     /**
-     * Method that creates a new condition for the lock
+     * 创建一个新的条件变量
      */
     @Override
     public Condition newCondition() {

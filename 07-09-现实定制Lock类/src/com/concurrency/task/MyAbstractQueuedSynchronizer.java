@@ -4,47 +4,41 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.AbstractQueuedSynchronizer;
 
 /**
- * This class extends the AbstractQueueSynchronizer class to implement
- * the basis of a Lock. Internally, it uses an AtomicInteger variable
- * to store the state of the lock. It also stores the current thread that
- * has the lock. The tryAcquire()  method and tryRelease() method
- * are the starting point for the Lock implementation
- *
+ * 自定义抽象队列同步器
  */
 public class MyAbstractQueuedSynchronizer extends AbstractQueuedSynchronizer {
 
-	/**
-	 * Serial version UID of the class
-	 */
-	private static final long serialVersionUID = 1L;
-		
-	/**
-	 * Attribute that stores the state of the lock. 0 if it's free, 1 if it's busy
-	 */
-	private AtomicInteger state;
-	
-	/**
-	 * Constructor of the class
-	 */
-	public MyAbstractQueuedSynchronizer() {
-		state=new AtomicInteger(0);
-	}
-	
-	/**
-	 * This method try to acquire the control of the lock
-	 * @return true if the thread acquires the lock, false otherwise
-	 */
-	@Override
-	protected boolean tryAcquire(int arg) {
-		return state.compareAndSet(0, 1);
-	}
+    private static final long serialVersionUID = 1L;
 
-	/**
-	 * This method try to free the control of the lock
-	 * @return true if the thread releases the lock, false otherwise
-	 */
-	@Override
-	protected boolean tryRelease(int arg) {
-		return state.compareAndSet(1, 0);
-	}
+    // 原子变量，存储锁的状态，0闲，1忙
+    private AtomicInteger state;
+
+    /**
+     * 构造函数
+     */
+    public MyAbstractQueuedSynchronizer() {
+        state = new AtomicInteger(0);
+    }
+
+    /**
+     * 获取锁
+     *
+     * @param arg （在本方法中不使用）
+     * @return true获取，false未获取
+     */
+    @Override
+    protected boolean tryAcquire(int arg) {
+        return state.compareAndSet(0, 1);
+    }
+
+    /**
+     * 释放锁
+     *
+     * @param arg 释放量（本方法中不使用）
+     * @return true成功，false失败
+     */
+    @Override
+    protected boolean tryRelease(int arg) {
+        return state.compareAndSet(1, 0);
+    }
 }
