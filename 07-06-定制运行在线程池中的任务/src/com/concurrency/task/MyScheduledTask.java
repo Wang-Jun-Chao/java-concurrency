@@ -8,113 +8,102 @@ import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 /**
- * 
- * This class implements an scheduled task to be execute in a scheduled thread pool executor. It's
- * a parameterized class where V is the type of data that will be returned by the task. 
- * 
- * An scheduled thread pool executor can execute two kinds of tasks:
- * 		Delayed Tasks: This kind of tasks are executed once after a period of time.
- * 		Periodic Tasks: This kind of tasks are executed from time to time
- * @param <V> Type of data that will be returned by the task
- * 
+ * 自定义任务高度类，它有一个参数化类型V
+ *
+ * @param <V>
  */
 public class MyScheduledTask<V> extends FutureTask<V> implements RunnableScheduledFuture<V> {
 
-	/**
-	 * Attribute to store the task that will be used to create a MyScheduledTask
-	 */
-	private RunnableScheduledFuture<V> task;
-	
-	/**
-	 * ScheduledThreadPoolExecutor that is going to execute the task
-	 */
-	private ScheduledThreadPoolExecutor executor;
-	
-	/**
-	 * Period of time between two executions of the task
-	 */
-	private long period;
-	
-	/**
-	 * Date when will begin the next execution of the task
-	 */
-	private long startDate;
-	
-	/**
-	 * Constructor of the class. It initializes the attributes of the class
-	 * @param runnable Runnable submitted to be executed by the task
-	 * @param result Result that will be returned by the task
-	 * @param task Task that will execute the Runnable object
-	 * @param executor Executor that is going to execute the task
-	 */
-	public MyScheduledTask(Runnable runnable, V result, RunnableScheduledFuture<V> task, ScheduledThreadPoolExecutor executor) {
-		super(runnable, result);
-		this.task=task;
-		this.executor=executor;
-	}
+    // 用于存储可调度的任务对象
+    private RunnableScheduledFuture<V> task;
 
-	/**
-	 * Method that returns the reminder for the next execution of the task. If is 
-	 * a delayed task, returns the delay of the original task. Else, return the difference
-	 * between the startDate attribute and the actual date.
-	 * @param unit TimeUnit to return the result
-	 */
-	@Override
-	public long getDelay(TimeUnit unit) {
-		if (!isPeriodic()) {
-			return task.getDelay(unit);
-		} else {
-			if (startDate==0){
-				return task.getDelay(unit);
-			} else {
-				Date now=new Date();
-				long delay=startDate-now.getTime();
-				return unit.convert(delay, TimeUnit.MILLISECONDS);
-			}
-		}
-	}
+    // 可调度的线程池执行器
+    private ScheduledThreadPoolExecutor executor;
 
-	/**
-	 * Method to compare two tasks. It calls the compareTo() method of the original task
-	 */
-	@Override
-	public int compareTo(Delayed o) {
-		return task.compareTo(o);
-	}
+    // 任务两次执行的时间间隔
+    private long period;
 
-	/**
-	 * Method that returns if the task is periodic or not. It calls the isPeriodic() method
-	 * of the original task
-	 */
-	@Override
-	public boolean isPeriodic() {
-		return task.isPeriodic();
-	}
+    // 任务开始执行的时间
+    private long startDate;
 
-	
-	/**
-	 * Method that executes the task. If it's a periodic task, it updates the 
-	 * start date of the task and store in the queue of the executor the task to
-	 * be executed again
-	 */
-	@Override
-	public void run() {
-		if (isPeriodic() && (!executor.isShutdown())) {
-			Date now=new Date();
-			startDate=now.getTime()+period;
-			executor.getQueue().add(this);
-		}
-		System.out.printf("Pre-MyScheduledTask: %s\n",new Date());
-		System.out.printf("MyScheduledTask: Is Periodic: %s\n",isPeriodic());
-		super.runAndReset();
-		System.out.printf("Post-MyScheduledTask: %s\n",new Date());
-	}
+    /**
+     * 构造函数
+     *
+     * @param runnable 任务提交的可执行的任务对象
+     * @param result   任务返回的结果
+     * @param task     执行runnable对象的任务
+     * @param executor 执行task对象的执行器
+     */
+    public MyScheduledTask(Runnable runnable, V result, RunnableScheduledFuture<V> task, ScheduledThreadPoolExecutor executor) {
+        super(runnable, result);
+        this.task = task;
+        this.executor = executor;
+    }
 
-	/**
-	 * Method that establish the period of the task for periodic tasks
-	 * @param period
-	 */
-	public void setPeriod(long period) {
-		this.period=period;
-	}
+    /**
+     * 返回下一次要执行的剩余时间，如是延迟任务就返回最初任务的延迟时间，
+     * 如果是周期任务，返回开始时间和当前时间的差值
+     *
+     * @param unit 延迟的时间单位
+     */
+    @Override
+    public long getDelay(TimeUnit unit) {
+        if (!isPeriodic()) {
+            return task.getDelay(unit);
+        } else {
+            if (startDate == 0) {
+                return task.getDelay(unit);
+            } else {
+                Date now = new Date();
+                long delay = startDate - now.getTime();
+                return unit.convert(delay, TimeUnit.MILLISECONDS);
+            }
+        }
+    }
+
+    /**
+     * 比较方法
+     */
+    @Override
+    public int compareTo(Delayed o) {
+        return task.compareTo(o);
+    }
+
+    /**
+     * 判断是否是周期任务
+     */
+    @Override
+    public boolean isPeriodic() {
+        return task.isPeriodic();
+    }
+
+
+    /**
+     * 主方法
+     */
+    @Override
+    public void run() {
+        // 如果是周期任务，并且执行器没有关闭
+        if (isPeriodic() && (!executor.isShutdown())) {
+            // 更新开始时间，同时将本任务再次入队
+            Date now = new Date();
+            startDate = now.getTime() + period;
+            executor.getQueue().add(this);
+        }
+
+        // 输出任务相关信息
+        System.out.printf("Pre-MyScheduledTask: %s\n", new Date());
+        System.out.printf("MyScheduledTask: Is Periodic: %s\n", isPeriodic());
+        super.runAndReset();
+        System.out.printf("Post-MyScheduledTask: %s\n", new Date());
+    }
+
+    /**
+     * 设置周期任务的时间间隔
+     *
+     * @param period 时间间隔
+     */
+    public void setPeriod(long period) {
+        this.period = period;
+    }
 }

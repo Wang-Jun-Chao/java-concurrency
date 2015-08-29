@@ -6,77 +6,44 @@ import com.concurrency.task.Task;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
-
-/**
- * Main class of the example. Creates a MyScheduledThreadPoolExecutor and
- * executes a delayed task and a periodic task in it.
- */
 public class Main {
 
-    /**
-     * @param args
-     */
     public static void main(String[] args) throws Exception {
 
-		/*
-		 * Create a MyScheduledThreadPool object
-		 */
+        // 创建一个自定义的调度线程池执行器框架
         MyScheduledThreadPoolExecutor executor = new MyScheduledThreadPoolExecutor(2);
-		
-		/*
-		 * Create a task object  
-		 */
+
+        // 创建一个任务
         Task task = new Task();
-		
-		/*
-		 * Write the start date of the execution
-		 */
+
+        // 输出开始执行的时间
         System.out.printf("Main: %s\n", new Date());
-		
-		/*
-		 * Send to the executor a delayed task. It will be executed after 1 second of delay
-		 */
+
+        // 向执行器中发送一个任务，它在一秒后执行
         executor.schedule(task, 1, TimeUnit.SECONDS);
-		
-		/*
-		 * Sleeps the thread three seconds 
-		 */
+
+        // 主线程休眠3秒
         TimeUnit.SECONDS.sleep(3);
-		
-		/*
-		 * Create another task
-		 */
+
+        // 创建一个任务
         task = new Task();
-		
-		/*
-		 * Write the actual date again
-		 */
+
+        // 输出开始执行的时间
         System.out.printf("Main: %s\n", new Date());
-		
-		/*
-		 * Send to the executor a delayed task. It will begin its execution after 1 second of dealy
-		 * and then it will be executed every three seconds
-		 */
+
+        // 送一个任务到执行器，它在一秒后执行，并且分每隔三秒执行一次
         executor.scheduleAtFixedRate(task, 1, 3, TimeUnit.SECONDS);
-		
-		/*
-		 * Sleep the thread during ten seconds
-		 */
+
+        // 主线程休眠10秒
         TimeUnit.SECONDS.sleep(10);
 
-		/*
-		 * Shutdown the executor
-		 */
+        // 关闭执行器
         executor.shutdown();
-		
-		/*
-		 * Wait for the finalization of the executor
-		 */
+
+        // 待待执行器运行结束
         executor.awaitTermination(1, TimeUnit.DAYS);
-		
-		/*
-		 * Write a message indicating the end of the program
-		 */
+
+        // 输出信息，通知程序进行结束
         System.out.printf("Main: End of the program.\n");
     }
 
