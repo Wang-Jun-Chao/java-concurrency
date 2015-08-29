@@ -5,32 +5,24 @@ import java.util.concurrent.RecursiveTask;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Task that will be executed in the Fork/Join framework. It calculates
- * the sum of all array elements
+ * 自定义递归任务类
  */
 public class MyRecursiveTask extends RecursiveTask<Integer> {
 
-    /**
-     * Serial Version UID
-     */
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Array to be summed
-     */
+    // 待计算的数组
     private int array[];
 
-    /**
-     * Start and end positions of the part of the array to be summed by this task
-     */
+    // 计算的起始和结束位置
     private int start, end;
 
     /**
-     * Constructor of the class. It initializes the  attributes of the task
+     * 构造函数，初始化任务属性
      *
-     * @param array Array to be summed
-     * @param start Start position of the block of the array to be summed by this task
-     * @param end   End position of the block of the array to be summed by this task
+     * @param array 待计算数组
+     * @param start 计算的起始位置
+     * @param end   计算的结束位置
      */
     public MyRecursiveTask(int array[], int start, int end) {
         this.array = array;
@@ -39,12 +31,7 @@ public class MyRecursiveTask extends RecursiveTask<Integer> {
     }
 
     /**
-     * Main method of the task. If the task has less than 100 elements to sum, it calculates
-     * the sum of these elements directly. Else, it creates two subtask to process the two
-     * halves of the block.
-     * <p/>
-     * It also calls the addTask() method of the thread that is executing the task to
-     * updates its internal counter of tasks
+     * 主方法，如果进行计算的数目大于100个就会成两个字任务进行执行
      */
     @Override
     protected Integer compute() {
@@ -74,7 +61,7 @@ public class MyRecursiveTask extends RecursiveTask<Integer> {
     }
 
     /**
-     * Method that adds the results of the two subtasks create by this task
+     * 归并两个子任务的结果
      *
      * @param task1 First task
      * @param task2 Second task

@@ -6,71 +6,42 @@ import com.concurrency.task.MyWorkerThreadFactory;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.TimeUnit;
 
-
-/**
- * Main class of the example. It creates an array of 100000 elements, initializes all
- * the elements to the 1 value, creates a new ForkJoinPool with the new
- */
 public class Main {
 
-    /**
-     * @param args
-     */
     public static void main(String[] args) throws Exception {
 
-		/*
-         * Create a new MyWorkerThreadFactory
-		 */
+		// 创建一个工厂线程工厂
         MyWorkerThreadFactory factory = new MyWorkerThreadFactory();
-		
-		/*
-		 * Create new ForkJoinPool, passing as parameter the factory created before
-		 */
+
+		// 创建一个Fork/Join池
         ForkJoinPool pool = new ForkJoinPool(4, factory, null, false);
-		
-		/*
-		 * Create and initializes the elements of the array
-		 */
+
+		// 初始化一个待计算的数组
         int array[] = new int[100000];
 
         for (int i = 0; i < array.length; i++) {
             array[i] = 1;
         }
-		
-		/*
-		 * Create a new Task to sum the elements of the array
-		 */
+
+		// 创建一个执行计算的任务对象
         MyRecursiveTask task = new MyRecursiveTask(array, 0, array.length);
-		
-		/*
-		 * Send the task to the ForkJoinPool 
-		 */
+
+		// 任务提交到fork/join池中
         pool.execute(task);
-		
-		
-		/*
-		 * Wait for the finalization of the task
-		 */
+
+        // 待待任务执行束
         task.join();
-		
-		/*
-		 * Shutdown the pool
-		 */
+
+		// 关闭Fork/Join池
         pool.shutdown();
-		
-		/*
-		 * Wait for the finalization of the pool
-		 */
+
+		// 待待池中的所有任务运行结束
         pool.awaitTermination(1, TimeUnit.DAYS);
-		
-		/*
-		 * Write the result of the task
-		 */
+
+		// 输出任务执行的结果
         System.out.printf("Main: Result: %d\n", task.get());
-		
-		/*
-		 * Write a message indicating the end of the program
-		 */
+
+		// 输出消息表示程序运行结束
         System.out.printf("Main: End of the program\n");
     }
 

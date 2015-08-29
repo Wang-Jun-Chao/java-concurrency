@@ -1,37 +1,27 @@
 package com.concurrency.task;
 
 /**
- * Task that extends the MyWorkerTask class to be executed
- * in a Fork/Join framework
+ * 自定义任务类
  */
 public class Task extends MyWorkerTask {
-
-    /**
-     * Serival Version UID of the task
-     */
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Array of integers. This task will increment all the elements of the array
-     */
+    // 任务要处理的数组
     private int array[];
-    /**
-     * First element of the array that this task is going to increment
-     */
+
+    // 开始做处理的位置
     private int start;
 
-    /**
-     * Last element of the array that this task is going to increment
-     */
+    // 处理结束的位置（不包含）
     private int end;
 
     /**
-     * Constructor of the class. It initializes its attributes
+     * 构造函数，初始化属性
      *
-     * @param name  Name of the task
-     * @param array Array of elements that is going to be incremented
-     * @param start First element of the array to be incremented by this task
-     * @param end   Last element of the array to be incremented by this task
+     * @param name  任务的名称
+     * @param array 处理的数组
+     * @param start 开始处理的位置
+     * @param end   处理结束的位置
      */
     public Task(String name, int array[], int start, int end) {
         super(name);
@@ -41,9 +31,7 @@ public class Task extends MyWorkerTask {
     }
 
     /**
-     * Main method of the task. If the task has to increment less that 100
-     * elements, it increments them directly. Else, it divides the
-     * operation in two subtasks
+     * 主访方法，如果要处理的元素个娄大于100个就分成两个子任务进行处理
      */
     @Override
     protected void compute() {
@@ -63,5 +51,4 @@ public class Task extends MyWorkerTask {
             }
         }
     }
-
 }
