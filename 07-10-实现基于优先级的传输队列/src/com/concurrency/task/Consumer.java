@@ -1,27 +1,19 @@
 package com.concurrency.task;
 
 /**
- * This class implements the Consumer of the events. There is only
- * one consumer in the example that consumes 1002 events
+ * 消费者类
  */
 public class Consumer implements Runnable {
 
-    /**
-     * Buffer from which the consumer takes the events
-     */
+
     private MyPriorityTransferQueue<Event> buffer;
 
-    /**
-     * Constructor of the class. Initializes its attributes
-     *
-     * @param buffer Buffer from which the consumer takes the events
-     */
     public Consumer(MyPriorityTransferQueue<Event> buffer) {
         this.buffer = buffer;
     }
 
     /**
-     * Main method of the consumer. It takes 1002 events from the buffer
+     * 消费1002个Event(例子中所有产生的事件), 并在控制台输出产生事件的线程的名称以及事件的优先级priority。
      */
     @Override
     public void run() {

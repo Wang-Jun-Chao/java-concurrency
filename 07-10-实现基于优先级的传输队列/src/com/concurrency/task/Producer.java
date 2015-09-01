@@ -1,35 +1,26 @@
 package com.concurrency.task;
 
 /**
- * This class implements the producers of data. It store 100
- * events in the queue with incremental priority
- *
+ * 产生者类
  */
 public class Producer implements Runnable {
-	
-	/**
-	 * Buffer used to store the events
-	 */
-	private MyPriorityTransferQueue<Event> buffer;
-	
-	/**
-	 * Constructor of the class. It initializes its parameters
-	 * @param buffer Buffer to store the events
-	 */
-	public Producer(MyPriorityTransferQueue<Event> buffer) {
-		this.buffer=buffer;
-	}
-	
-	/**
-	 * Main method of the producer. Store 100 events in the buffer with
-	 * incremental priority
-	 */
-	@Override
-	public void run() {
-		for (int i=0; i<100; i++) {
-			Event event=new Event(Thread.currentThread().getName(),i);
-			buffer.put(event);
-		}
-	}
 
+    // // 用来存储由这个类生成的事件
+    private MyPriorityTransferQueue<Event> buffer;
+
+    public Producer(MyPriorityTransferQueue<Event> buffer) {
+        this.buffer = buffer;
+    }
+
+    /**
+     * 创建100个Event对象，使用创建序号作为优先级（事件创 建的越晚优先级越高)，
+     * 并使用put()方法将它们插入到队列中。
+     */
+    @Override
+    public void run() {
+        for (int i = 0; i < 100; i++) {
+            Event event = new Event(Thread.currentThread().getName(), i);
+            buffer.put(event);
+        }
+    }
 }

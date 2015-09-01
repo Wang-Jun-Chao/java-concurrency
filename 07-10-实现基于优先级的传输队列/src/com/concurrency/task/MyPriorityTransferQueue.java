@@ -8,35 +8,25 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * This class implements a priority based transfer queue. It extends the
- * PriorityBlockingQueue class and implements the TransferQueue interface
+ *  自定义线程优先级类
  *
- * @param <E> Class of the elements to be stored in the queue
+ * @param <E> 泛型参数
  */
 public class MyPriorityTransferQueue<E> extends PriorityBlockingQueue<E> implements TransferQueue<E> {
 
-    /**
-     * Serial Version of the class
-     */
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Number of consumers waiting
-     */
+    // 等待的消费者数目
     private AtomicInteger counter;
 
-    /**
-     * Blocking queue to store the transfered elements
-     */
+    // 存储传输元素的队列
     private LinkedBlockingQueue<E> transfered;
 
-    /**
-     * Lock to control the acces to the operations
-     */
+    // 锁对象
     private ReentrantLock lock;
 
     /**
-     * Constructor of the class
+     * 构造函数
      */
     public MyPriorityTransferQueue() {
         counter = new AtomicInteger(0);
@@ -45,9 +35,7 @@ public class MyPriorityTransferQueue<E> extends PriorityBlockingQueue<E> impleme
     }
 
     /**
-     * This method tries to transfer an element to a consumer. If there is
-     * a consumer waiting, we puts the element in the queue and return the
-     * true value. Else, return the false value.
+     * 将元素发送到一个正在等待的消费者，如查没有等待中的消费者，就返回false
      */
     @Override
     public boolean tryTransfer(E e) {
@@ -64,11 +52,8 @@ public class MyPriorityTransferQueue<E> extends PriorityBlockingQueue<E> impleme
     }
 
     /**
-     * Transfer an element to the consumer. If there is a consumer waiting,
-     * puts the element on the queue and return the true value. Else, puts the
-     * value in the transfered queue and returns the false value. In this case, the
-     * thread than makes the call will be blocked until a consumer takes the transfered
-     * elements
+     * 将元素发送到一个正在等待的消费者，如查没有等待中的消费者，将元素存储到transfer队列中，
+     * 并且等待出现试图获取元素的第一个消费者，这在这前线程被阻塞
      */
     @Override
     public void transfer(E e) throws InterruptedException {
@@ -86,10 +71,10 @@ public class MyPriorityTransferQueue<E> extends PriorityBlockingQueue<E> impleme
     }
 
     /**
-     * This method tries to transfer an element to a consumer waiting a maximum period
-     * of time. If there is a consumer waiting, puts the element in the queue. Else,
-     * puts the element in the queue of transfered elements and wait the specified period of time
-     * until that time pass or the thread is interrupted.
+     * 第一个参数用以表示生产和消费的元素, 第二个参数表示如果没有消费者则等待一个消费者的时间，
+     * 第三个参数表示等待时间的单 位。如果有消费者在等待，它就立即发送元素。否则，将参数指定的
+     * 时间转换为毫秒并使 用wait()方法让线程休眠。当消费者取元素时，如果线程仍在wait()方法中
+     * 休眠，将使用notify()方法去唤醒它
      */
     @Override
     public boolean tryTransfer(E e, long timeout, TimeUnit unit)
@@ -118,7 +103,7 @@ public class MyPriorityTransferQueue<E> extends PriorityBlockingQueue<E> impleme
 
 
     /**
-     * Method that returns if the queue has waiting consumers
+     * 使用counter属性的值来计算该方法的返回值，不为0返回true，否则返回false
      */
     @Override
     public boolean hasWaitingConsumer() {
@@ -126,7 +111,7 @@ public class MyPriorityTransferQueue<E> extends PriorityBlockingQueue<E> impleme
     }
 
     /**
-     * Method that returns the number of waiting consumers
+     * 返回 counter 属性的值
      */
     @Override
     public int getWaitingConsumerCount() {
@@ -134,10 +119,8 @@ public class MyPriorityTransferQueue<E> extends PriorityBlockingQueue<E> impleme
     }
 
     /**
-     * Method that returns the first element of the queue or is blocked if the queue
-     * is empty. If there is transfered elements, takes the first transfered element and
-     * wake up the thread that is waiting for the transfer of that element. Else, takes the
-     * first element of the queue or is blocked until there is one element in the queue.
+     * 如果在transfered队列中没有元素，则释放锁并尝试使用toke()方法从队列中取
+     * 得一个元素并再次获取锁.如果队列中没有元素，该方法将让线程休眠直至有元素可被消费
      */
     @Override
     public E take() throws InterruptedException {
