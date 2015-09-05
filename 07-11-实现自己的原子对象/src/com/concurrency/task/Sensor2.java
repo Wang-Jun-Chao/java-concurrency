@@ -1,26 +1,24 @@
 package com.concurrency.task;
 
 /**
- * Class that simulates a sensor in the doors of the parking
- *
+* 场景类，模拟停车操作
  */
 public class Sensor2 implements Runnable {
 
-	/**
-	 * Counter of cars in the parking
-	 */
+	// 停车场计数器
 	private ParkingCounter counter;
-	
+
 	/**
-	 * Constructor of the class. It initializes its attributes
-	 * @param counter Counter of cars in the parking
+	 * 构造函数
+	 *
+	 * @param counter 停车场计数器
 	 */
 	public Sensor2(ParkingCounter counter) {
 		this.counter=counter;
 	}
 	
 	/**
-	 * Main method of the sensor. Simulates the traffic in the door of the parking
+	 * 主方法，进行停车场场景模拟
 	 */
 	@Override
 	public void run() {
